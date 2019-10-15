@@ -1,27 +1,22 @@
-{% set name = "inflection" %}
 {% set version = "0.3.1" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "18ea7fb7a7d152853386523def08736aa8c32636b047ade55f7578c4edeb16ca" %}
 
 package:
-  name: {{ name }}
+  name: inflection
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.io/packages/source/i/inflection/inflection-{{ version }}.tar.gz
+  sha256: 18ea7fb7a7d152853386523def08736aa8c32636b047ade55f7578c4edeb16ca
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - python
     - pip
-
   run:
     - python
 
@@ -41,3 +36,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - abloemert
