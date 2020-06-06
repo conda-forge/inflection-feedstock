@@ -1,4 +1,4 @@
-{% set version = "0.3.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: inflection
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/inflection/inflection-{{ version }}.tar.gz
-  sha256: 18ea7fb7a7d152853386523def08736aa8c32636b047ade55f7578c4edeb16ca
+  sha256: f576e85132d34f5bf7df5183c2c6f94cfb32e528f53065345cf71329ba0b8924
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -29,7 +29,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A port of Ruby on Rails inflector to Python'
+  summary: A port of Ruby on Rails inflector to Python
   dev_url: https://github.com/jpvanhal/inflection
   doc_url: https://inflection.readthedocs.io/en/latest/
 
