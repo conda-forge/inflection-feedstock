@@ -5,7 +5,7 @@ Home: https://github.com/jpvanhal/inflection
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A port of Ruby on Rails inflector to Python
 
